@@ -20,6 +20,45 @@
         .sora-font {
             font-family: "Sora", serif;
         }
+
+        /* animation style */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, #f3f3f3, #d4fad5, #f7f9c5, #ffe5b4);
+            background-size: 400% 400%;
+            animation: gradientAnimation 8s ease infinite;
+        }
+
+        .floating {
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
     </style>
 
     <script>
@@ -39,7 +78,7 @@
 
 <body class="sora-font">
     <!-- header -->
-    <header class="bg-gradient-to-b from-white to-[#EFEBE3]">
+    <header class="animated-bg">
         <!-- nav-bar -->
         <nav class="mx-2 mb-12 lg:mb-24 lg:mx-28 ">
             <div class="navbar flex justify-between">
@@ -101,7 +140,7 @@
             </div>
             <!-- banner picture -->
             <div>
-                <img class="lg:w-[50%] lg:mx-auto" src="Image/hero-vegetables.png" alt="" width="100%">
+                <img class="floating lg:w-[50%] lg:mx-auto" src="Image/hero-vegetables.png" alt="" width="100%">
             </div>
         </section>
         <!-- banner section end -->
@@ -110,7 +149,73 @@
 
     <!-- main start -->
     <main>
-        <!-- main-1 Section -->
+        <!-- main-1 section -->
+        <section class="md:mb-20 p-10">
+            <h3 class="text-2xl md:text-3xl font-bold text-green-700 mb-10 md:mb-10">Browse By Categories</h3>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                <!-- vegetable-1 -->
+                <div class="bg-orange-600 flex flex-col items-center p-5 rounded-lg">
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="Image/pumkin.png" />
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold">Name: Pumpkin</h5>
+                    <p>4 items</p>
+                </div>
+                <!-- vegetable-2 -->
+                <div class="bg-purple-700 flex flex-col items-center p-5 rounded-lg">
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="Image/eggplant.png" />
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold">Name: Eggplant</h5>
+                    <p>5 items</p>
+                </div>
+                <!-- vegetable-3 -->
+                <div class="bg-orange-400 flex flex-col items-center p-5 rounded-lg">
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="Image/carrots.png" />
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold">Name: Carrots</h5>
+                    <p>4 items</p>
+                </div>
+                <!-- vegetable-4 -->
+                <div class="bg-orange-300 flex flex-col items-center p-5 rounded-lg">
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="Image/Capsicum.png" />
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold">Name: Capsicum</h5>
+                    <p>2 items</p>
+                </div>
+                <!-- vegetable-5 -->
+                <div class="bg-green-400 flex flex-col items-center p-5 rounded-lg">
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="Image/Cauliflower.png" />
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold">Name: Cauliflower</h5>
+                    <p>3 items</p>
+                </div>
+                <!-- vegetable-6 -->
+                <div class="bg-green-600 flex flex-col items-center p-5 rounded-lg">
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="Image/lady's finger.png" />
+                        </div>
+                    </div>
+                    <h5 class="text-lg font-semibold">Name: Pumpkin</h5>
+                    <p>5 items</p>
+                </div>
+            </div>
+        </section>
+        <!-- main-2 Section -->
         <section class="mb-10 lg:mb-32 w-[85%] mx-auto">
             <h3 class="text-3xl text-green-600 mb-12 font-bold">Services</h3>
             <!-- section-1 cards -->
@@ -138,72 +243,7 @@
                 </div>
             </div>
         </section>
-        <!-- main-2 section -->
-        <section class="md:mb-20 p-10">
-            <h3 class="text-2xl md:text-3xl font-bold text-green-700 mb-10 md:mb-10">Browse By Categories</h3>
-            <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
-                <!-- vegetable-1 -->
-                <div class="bg-orange-600 flex flex-col items-center p-5 rounded-lg">
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="Image/pumkin.png" />
-                        </div>
-                      </div>
-                      <h5 class="text-lg font-semibold">Name: Pumpkin</h5>
-                      <p>27 left</p>
-                </div>
-                <!-- vegetable-2 -->
-                <div class="bg-purple-700 flex flex-col items-center p-5 rounded-lg">
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="Image/eggplant.png" />
-                        </div>
-                      </div>
-                      <h5 class="text-lg font-semibold">Name: Eggplant</h5>
-                      <p>102 left</p>
-                </div>
-                <!-- vegetable-3 -->
-                <div class="bg-orange-400 flex flex-col items-center p-5 rounded-lg">
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="Image/carrots.png" />
-                        </div>
-                      </div>
-                      <h5 class="text-lg font-semibold">Name: Carrots</h5>
-                      <p>274 left</p>
-                </div>
-                <!-- vegetable-4 -->
-                <div class="bg-orange-300 flex flex-col items-center p-5 rounded-lg">
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="Image/Capsicum.png" />
-                        </div>
-                      </div>
-                      <h5 class="text-lg font-semibold">Name: Capsicum</h5>
-                      <p>17 left</p>
-                </div>
-                <!-- vegetable-5 -->
-                <div class="bg-green-400 flex flex-col items-center p-5 rounded-lg">
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="Image/Cauliflower.png" />
-                        </div>
-                      </div>
-                      <h5 class="text-lg font-semibold">Name: Cauliflower</h5>
-                      <p>33 left</p>
-                </div>
-                <!-- vegetable-6 -->
-                <div class="bg-green-600 flex flex-col items-center p-5 rounded-lg">
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="Image/lady's finger.png" />
-                        </div>
-                      </div>
-                      <h5 class="text-lg font-semibold">Name: Pumpkin</h5>
-                      <p>27 left</p>
-                </div>
-            </div>
-        </section>
+
         <!-- main-3 Section -->
         <section class="bg-[#EFEBE3] mb-10 lg:mb-20 p-1 md:p-24">
             <h3 class="text-2xl md:text-3xl font-bold text-green-700 mb-10 md:mb-20">Popular Products</h3>
@@ -353,17 +393,18 @@
             </div>
         </section>
         <!-- main-4 Section -->
-         <section class="mb-10 p-1 md:px-24 md:pt-24">
+        <section class="mb-10 p-1 md:px-24 md:pt-24">
             <h3 class="text-2xl md:text-3xl font-bold text-green-700 mb-10 md:mb-20">Arrival & Offers</h3>
             <!-- new start -->
-             <div class="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-5">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-5">
                 <!-- card-1 -->
                 <div class="md:col-span-3 bg-[#115414] rounded-xl flex justify-between md:p-5">
                     <div class="space-y-3 md:space-y-6 mt-2 md:mt-10 p-4 md:p-[0]">
                         <div>
                             <img src="Image/dawat-logo.png" alt="">
                         </div>
-                        <button class="btn bg-[#63B76D] border-none text-white text-xs md:text-xl">Cook Exotic Dishes</button>
+                        <button class="btn bg-[#63B76D] border-none text-white text-xs md:text-xl">Cook Exotic
+                            Dishes</button>
                         <h3 class="text-white text-xl md:text-4xl">
                             UP to 20% OFF
                         </h3>
@@ -378,7 +419,8 @@
                         <div>
                             <img src="Image/india-gate-logo.png" alt="">
                         </div>
-                        <button class="btn bg-[#2A4D97] border-none text-white text-xs md:text-xl">World’s No.1 Rice</button>
+                        <button class="btn bg-[#2A4D97] border-none text-white text-xs md:text-xl">World’s No.1
+                            Rice</button>
                         <h3 class="text-white text-xl md:text-4xl">
                             UP to 20% OFF
                         </h3>
@@ -387,49 +429,53 @@
                         <img class="max-w-[90%] md:max-w-none mt-5 md:mt-0" src="Image/india-gate-mock-up.png" alt="">
                     </div>
                 </div>
-             </div>
+            </div>
 
-         </section>
+        </section>
     </main>
     <!-- main end -->
 
     <!-- footer start -->
     <footer>
         <!-- footer-section-1 -->
-         <section class="md:flex md:gap-32 md:items-center mx-4 md:mx-28 bg-[#EFEBE3] rounded-xl md:px-20 md:p-10 translate-y-[50%] -mt-48">
+        <section
+            class="md:flex md:gap-32 md:items-center mx-4 md:mx-28 bg-[#EFEBE3] rounded-xl md:px-20 md:p-10 translate-y-[50%] -mt-48">
             <div class="max-w-[50%] md:max-w-none mx-auto md:mx-0 pt-6">
                 <img class="md:max-w-[80%]" src="Image/vegetable-busket.png" alt="">
             </div>
             <div class="space-y-2 md:space-y-3 p-4 md:p-0">
-                <h3 class="text-lg text-[#179800] md:text-gray-950 font-semibold md:text-3xl md:font-bold">Get Grocery News!</h3>
-                <p class="font-medium md:font-semibold text-gray-700">Exclusive training tips, ticks, product deals and more.</p>
+                <h3 class="text-lg text-[#179800] md:text-gray-950 font-semibold md:text-3xl md:font-bold">Get Grocery
+                    News!</h3>
+                <p class="font-medium md:font-semibold text-gray-700">Exclusive training tips, ticks, product deals and
+                    more.</p>
                 <input type="email" placeholder="Enter email...." class="input w-full max-w-xs" /> <br>
                 <button class="btn bg-[#179800] text-gray-300 hover:text-pink-400">Subscribe</button>
             </div>
-         </section>
-         <!-- footer-section-2 -->
-          <section>
+        </section>
+        <!-- footer-section-2 -->
+        <section>
             <footer class="footer bg-[#179800] text-base-content px-5 md:px-32 pt-52 md:pt-60 pb-6 md:pb-10">
                 <nav>
-                  <img src="Image/logo-footer.png" alt="">
-                  <p class="max-w-[50%] text-gray-300">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+                    <img src="Image/logo-footer.png" alt="">
+                    <p class="max-w-[50%] text-gray-300">Discover a world of treats, toys, and essentials handpicked for
+                        your furry friends</p>
                 </nav>
                 <nav>
-                  <a class="link link-hover text-gray-300">Product</a>
-                  <a class="link link-hover text-gray-300">Services</a>
-                  <a class="link link-hover text-gray-300">Contact us</a>
+                    <a class="link link-hover text-gray-300">Product</a>
+                    <a class="link link-hover text-gray-300">Services</a>
+                    <a class="link link-hover text-gray-300">Contact us</a>
                 </nav>
                 <nav>
-                  <h6 class="footer-title text-gray-300">Follow Us</h6>
-                  <div class="grid grid-flow-col gap-4">
-                    <i class="fa-brands fa-facebook text-gray-300"></i>
-                    <i class="fa-brands fa-square-instagram text-gray-300"></i>
-                    <i class="fa-brands fa-linkedin text-gray-300"></i>
-                    <i class="fa-brands fa-youtube text-gray-300"></i>
-                  </div>
+                    <h6 class="footer-title text-gray-300">Follow Us</h6>
+                    <div class="grid grid-flow-col gap-4">
+                        <i class="fa-brands fa-facebook text-gray-300"></i>
+                        <i class="fa-brands fa-square-instagram text-gray-300"></i>
+                        <i class="fa-brands fa-linkedin text-gray-300"></i>
+                        <i class="fa-brands fa-youtube text-gray-300"></i>
+                    </div>
                 </nav>
-              </footer>
-          </section>
+            </footer>
+        </section>
     </footer>
     <!-- footer end -->
 </body>
